@@ -1,0 +1,7 @@
+.background-vol {
+  background-image: url('../assets/Airport.webp');
+  background-size: cover;
+  background-position: center;
+  height: 70vh; /* ou une autre hauteur */
+ 
+}
