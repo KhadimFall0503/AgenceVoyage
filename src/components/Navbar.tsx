@@ -1,7 +1,7 @@
 function Navbar() {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg bg-white p-3 px-5">
+      <nav className="navbar navbar-expand-lg navbar-light bg-white p-3 px-5">
         <div className="container" style={{ maxWidth: '900px', margin: '0 auto' }}>
           <a href="#" className="navbar-brand text-primary fw-bold">FlightDeck Airport</a>
           <button
@@ -19,7 +19,7 @@ function Navbar() {
           <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item fw-bold">
-                <a className="nav-link" aria-current="page" href="#">Vols</a>
+                <a className="nav-link"  href="#">Vols</a>
               </li>
               <li className="nav-item fw-bold">
                 <a className="nav-link" href="#">Services</a>
