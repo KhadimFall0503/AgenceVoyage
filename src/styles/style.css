@@ -1,18 +1,37 @@
-body{
+/* Reset de base */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
 }
+
+/* Style global du body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* léger gris clair */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Conteneur de la section avec background */
 .background-vol {
   background-image: url('../assets/airport.avif');
   background-size: cover;
   background-position: center;
   height: 60vh;
   width: 100%;
-  position: relative; /* ✅ essentiel pour l'overlay */
-  z-index: 1;
+  position: relative; /* nécessaire pour l'overlay */
+  z-index: 0;
+  margin-top: 75px; /* laisse de la place pour la navbar fixe */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
 }
 
+/* Overlay sombre semi-transparent */
 .background-vol::before {
   content: '';
   position: absolute;
@@ -20,6 +39,41 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* superposition noire transparente */
-  z-index: -1;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Contenu au-dessus de l'overlay */
+.background-vol > * {
+  position: relative;
+  z-index: 2;
+  color: #f0f0f0; /* texte clair */
+}
+
+/* Titres */
+.background-vol h1 {
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+/* Paragraphe */
+.background-vol p {
+  font-size: 1.25rem;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+/* Responsive - taille écrans petits */
+@media (max-width: 768px) {
+  .background-vol {
+    height: 50vh;
+  }
+  .background-vol h1 {
+    font-size: 1.8rem;
+  }
+  .background-vol p {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
 }
