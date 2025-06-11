@@ -7,7 +7,7 @@
 
 /* Style global du body */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   background-color: #f8f9fa; /* léger gris clair */
   color: #333;
   line-height: 1.6;
@@ -18,7 +18,8 @@ body {
   background-image: url('../assets/airport.avif');
   background-size: cover;
   background-position: center;
-  height: 60vh;
+  background-attachment: fixed;
+  height: 90vh;
   width: 100%;
   position: relative; /* nécessaire pour l'overlay */
   z-index: 0;
@@ -41,6 +42,7 @@ body {
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: 1;
+  transition: background 0.3s ease;
 }
 
 /* Contenu au-dessus de l'overlay */
